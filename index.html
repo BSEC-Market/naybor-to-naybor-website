@@ -5,30 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naybor-to-Naybor | Reliable Home Services</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
 
-  <!-- AOS Animation Library -->
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       font-family: 'Montserrat', sans-serif;
       color: #333;
-      background: #fff;
+      background: #f5f8fa;
+      margin: 0;
     }
     .navbar {
-      background: transparent;
-      transition: background 0.4s ease;
-    }
-    .navbar.scrolled {
-      background: rgba(0, 80, 160, 0.9);
+      background: rgba(0, 64, 128, 0.8);
+      backdrop-filter: blur(6px);
     }
     .nav-link {
       color: #fff;
@@ -60,7 +55,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 80, 160, 0.5);
+      background: rgba(0, 64, 128, 0.5);
       z-index: 1;
     }
     header.hero .content {
@@ -68,6 +63,7 @@
       z-index: 2;
       top: 50%;
       transform: translateY(-50%);
+      padding: 0 20px;
     }
     header.hero h1 {
       font-size: 3.5rem;
@@ -76,76 +72,65 @@
     header.hero p {
       font-size: 1.25rem;
       font-weight: 300;
-      margin-top: 15px;
-    }
-    section {
-      padding: 80px 20px;
-    }
-    .section-light {
-      background: #f9f9f9;
-    }
-    .section-dark {
-      background: #004080;
-      color: #fff;
-    }
-    footer {
-      background: #004080;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+      margin-top: 20px;
     }
     .btn-primary {
       background-color: #4DB8FF;
       border: none;
       font-weight: 600;
       padding: 12px 30px;
+      border-radius: 50px;
     }
-    svg.logo {
-      height: 60px;
-      width: auto;
-      margin-right: 10px;
+    section {
+      padding: 80px 20px;
     }
-    .scrolling-wrapper {
-      display: flex;
-      animation: scroll 60s linear infinite;
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      color: #004080;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
+    .overview-text {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
+      margin-top: 50px;
+      padding: 0 20px;
     }
-    .scrolling-wrapper img {
-      height: 300px;
-      flex-shrink: 0;
-      border-radius: 8px;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .photo-grid img {
+    .gallery-preview img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-    @media (max-width: 767px) {
-      header.hero video {
-        display: none;
-      }
-      header.hero {
-        background-image: url('images/hero.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    .gallery-preview img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" class="logo" />
+      <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" style="height: 50px; width: auto; margin-right: 10px;">
       <span class="text-white fw-bold">Naybor-to-Naybor</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -163,60 +148,35 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
   <video autoplay muted loop playsinline>
     <source src="https://player.vimeo.com/external/463448400.sd.mp4?s=1e55a8b1b2b3228a0c85f9a3fa7565f3f623effb&profile_id=164" type="video/mp4" />
   </video>
   <div class="overlay"></div>
-  <div class="content">
-    <h1 data-aos="fade-up">Naybor-to-Naybor</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Your trusted partner for junk removal, cleanouts, and home services in Richmond, VA.</p>
-    <a href="contact.html" class="btn btn-primary mt-4" data-aos="fade-up" data-aos-delay="400">
-      Get a Free Estimate
-    </a>
+  <div class="content" data-aos="fade-up">
+    <h1>Naybor-to-Naybor</h1>
+    <p>Your trusted partner for junk removal, cleanouts, and home services in Richmond, VA.</p>
+    <a href="contact.html" class="btn btn-primary mt-4">Get a Free Estimate</a>
   </div>
 </header>
 
-<!-- About Section -->
-<section class="section-light" data-aos="fade-up">
-  <div class="container text-center">
-    <h2>About Naybor-to-Naybor</h2>
-    <p class="lead mt-3">
-      Our mission is to help customers complete tasks they either don’t have time for, are not able to do, or simply don’t want to do. We proudly serve Richmond, VA and surrounding areas, delivering trusted, high-quality services with excellent customer care.
-    </p>
-  </div>
+<section data-aos="fade-up">
+  <h2 class="section-title">About Us</h2>
+  <p class="overview-text">
+    At Naybor-to-Naybor, we help customers with the projects they don’t have time for, can’t tackle alone, or simply prefer not to handle. From junk removal and cleanouts to moving assistance, pressure washing, and light contracting, we deliver quality work and outstanding customer care throughout Richmond, VA.
+  </p>
 </section>
 
-<!-- Scrolling Carousel -->
-<section class="section-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4">See Us In Action</h2>
-    <div class="scrolling-wrapper">
-      <img src="images/job1.jpg" alt="Junk Removal Project">
-      <img src="images/job2.jpg" alt="Pressure Washing Project">
-      <img src="images/job3.jpg" alt="Yard Waste Cleanout">
-      <img src="images/job4.jpg" alt="Moving Heavy Furniture">
-      <img src="images/job5.jpg" alt="Construction Debris Removal">
-    </div>
+<section data-aos="fade-up">
+  <h2 class="section-title">Our Work</h2>
+  <div class="gallery-preview">
+    <img src="images/BeforeDeck.webp" alt="Deck before repair">
+    <img src="images/AfterDeck.webp" alt="Deck after repair">
+    <img src="images/BeforeTub.webp" alt="Bathroom before renovation">
+    <img src="images/AfterTub.webp" alt="Bathroom after renovation">
   </div>
-</section>
-
-<!-- Our Work -->
-<section class="section-dark" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Work in Pictures</h2>
-    <div class="row photo-grid">
-      <div class="col-md-4">
-        <img src="images/job1.jpg" alt="Before and after junk removal">
-      </div>
-      <div class="col-md-4">
-        <img src="images/job2.jpg" alt="Pressure washing result">
-      </div>
-      <div class="col-md-4">
-        <img src="images/job3.jpg" alt="Heavy lifting services">
-      </div>
-    </div>
+  <div class="text-center mt-4">
+    <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
   </div>
 </section>
 
@@ -224,15 +184,10 @@
   &copy; 2025 Naybor-to-Naybor. All Rights Reserved.
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-  window.addEventListener('scroll', function() {
-    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
-  });
 </script>
 
 </body>
