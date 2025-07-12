@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Naybor-to-Naybor</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background: #f5f8fa;
       color: #333;
+      margin: 0;
     }
     .navbar {
-      background: rgba(0, 64, 128, 0.8);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 31, 63, 0.8);
+      backdrop-filter: blur(8px);
     }
     .nav-link {
       color: #fff;
@@ -23,47 +31,65 @@
       margin-right: 20px;
     }
     .nav-link:hover {
-      color: #4DB8FF;
+      color: #d4af37;
+    }
+    header.hero {
+      position: relative;
+      height: 50vh;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(to right, #4DB8FF, #001f3f);
+    }
+    header.hero .content {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+    header.hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      font-weight: 400;
+      color: #fff;
     }
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
     .section-title {
       text-align: center;
+      font-family: 'Playfair Display', serif;
       font-weight: 700;
-      color: #004080;
+      color: #001f3f;
       margin-bottom: 50px;
       font-size: 2.5rem;
     }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .service-box {
+    .service-card {
       background: #fff;
       border-radius: 12px;
-      padding: 30px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      padding: 30px;
       transition: transform 0.3s ease;
-      text-align: center;
+      height: 100%;
     }
-    .service-box:hover {
+    .service-card:hover {
       transform: translateY(-5px);
     }
-    .service-box h3 {
-      color: #004080;
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #001f3f;
       margin-bottom: 15px;
-      font-weight: 600;
     }
-    .service-box p {
-      color: #555;
+    .service-desc {
+      font-family: 'Lora', serif;
       font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
     }
     footer {
-      background: #004080;
+      background: #001f3f;
       color: #fff;
       text-align: center;
       padding: 20px;
@@ -77,7 +103,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" style="height: 50px; width: auto; margin-right: 10px;">
-      <span class="text-white fw-bold">Naybor-to-Naybor</span>
+      <span class="text-white fw-bold" style="font-family: 'Playfair Display', serif;">Naybor-to-Naybor</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -88,43 +114,71 @@
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section data-aos="fade-up">
-  <h1 class="section-title">Our Services</h1>
+<header class="hero">
+  <div class="content" data-aos="fade-up">
+    <h1>Our Services</h1>
+  </div>
+</header>
 
-  <div class="services-grid">
-    <div class="service-box">
-      <h3>Junk Removal</h3>
-      <p>Quick, reliable removal of unwanted items, furniture, appliances, and debris from your home or business.</p>
-    </div>
-    <div class="service-box">
-      <h3>Cleanouts</h3>
-      <p>Thorough cleanouts for attics, basements, garages, estates, and more—so you don’t have to lift a finger.</p>
-    </div>
-    <div class="service-box">
-      <h3>Yard Waste Removal</h3>
-      <p>We clear out fallen branches, leaves, and landscaping debris to restore your outdoor spaces.</p>
-    </div>
-    <div class="service-box">
-      <h3>Pressure Washing</h3>
-      <p>Professional washing for siding, driveways, patios, and decks to keep your property looking its best.</p>
-    </div>
-    <div class="service-box">
-      <h3>Gutter Cleaning</h3>
-      <p>Protect your home from water damage with our thorough and efficient gutter cleaning services.</p>
-    </div>
-    <div class="service-box">
-      <h3>Moving & Heavy Lifting</h3>
-      <p>We handle the heavy lifting and moving of large or awkward items safely and quickly.</p>
-    </div>
-    <div class="service-box">
-      <h3>Light Contracting</h3>
-      <p>Small repairs, installations, and general home improvements completed with professionalism and care.</p>
+<section data-aos="fade-up">
+  <h2 class="section-title">What We Offer</h2>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Junk Removal</div>
+          <div class="service-desc">Fast, efficient junk removal for residential or commercial spaces. Clear out clutter, reclaim space, and enjoy stress-free hauling services.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Cleanouts</div>
+          <div class="service-desc">From estate cleanouts to garages and attics, we handle sensitive and large-scale removals with care and discretion.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Yard Waste Removal</div>
+          <div class="service-desc">Keep your outdoor spaces pristine. We remove yard debris, branches, and landscaping waste quickly and affordably.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Pressure Washing</div>
+          <div class="service-desc">Restore the beauty of your property. We clean siding, decks, patios, and driveways to look fresh and new.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Gutter Cleaning</div>
+          <div class="service-desc">Protect your home from water damage with our thorough gutter cleaning services for residential and commercial properties.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Moving & Heavy Lifting</div>
+          <div class="service-desc">We help relocate heavy furniture and handle local moves with care, professionalism, and efficient service.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">Light Contracting</div>
+          <div class="service-desc">Skilled in drywall repair, carpentry, installations, and small renovation projects. We handle minor improvements with precision.</div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card">
+          <div class="service-title">General Contracting</div>
+          <div class="service-desc">Full-scale contracting services tailored to your unique needs. We manage projects from start to finish for outstanding results.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
