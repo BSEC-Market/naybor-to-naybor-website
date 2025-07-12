@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Naybor-to-Naybor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      background: #fff;
+    }
+    .navbar {
+      background: #004080;
+    }
+    .nav-link {
+      color: #fff;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+    .nav-link:hover {
+      color: #4DB8FF;
+    }
+    section {
+      padding: 80px 20px;
+    }
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .btn-primary {
+      background-color: #4DB8FF;
+      border: none;
+      font-weight: 600;
+      padding: 12px 30px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" style="height: 60px; width: auto; margin-right: 10px;">
+      <span class="text-white fw-bold">Naybor-to-Naybor</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section data-aos="fade-up">
+  <div class="container">
+    <h1 class="text-center mb-5">Contact Naybor-to-Naybor</h1>
+    <p class="lead text-center mb-4">
+      Let us help you with your next project. Reach out for a free estimate or schedule a paid consultation.
+    </p>
+
+    <div class="text-center mb-5">
+      <p><strong>Phone:</strong> <a href="tel:8046657613">804-665-7613</a></p>
+      <p><strong>Email:</strong> <a href="mailto:naybortonayborllc@gmail.com">naybortonayborllc@gmail.com</a></p>
+      <a href="tel:8046657613" class="btn btn-primary mt-3 me-2">Call Now</a>
+      <a href="mailto:naybortonayborllc@gmail.com" class="btn btn-primary mt-3">Email Us</a>
+    </div>
+
+    <form name="contact" method="POST" data-netlify="true" class="mx-auto" style="max-width: 600px;">
+      <input type="hidden" name="form-name" value="contact" />
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" name="name" id="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Naybor-to-Naybor. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
