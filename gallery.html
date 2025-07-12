@@ -11,10 +11,12 @@
     body {
       font-family: 'Montserrat', sans-serif;
       color: #333;
-      background: #fff;
+      background: #f5f8fa;
+      margin: 0;
     }
     .navbar {
-      background: #004080;
+      background: rgba(0, 64, 128, 0.8);
+      backdrop-filter: blur(8px);
     }
     .nav-link {
       color: #fff;
@@ -25,27 +27,60 @@
       color: #4DB8FF;
     }
     section {
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
-    .gallery-card {
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 30px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    .gallery-title {
+      text-align: center;
+      font-weight: 700;
+      color: #004080;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
     }
-    .gallery-card img {
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      background: #fff;
+    }
+    .gallery-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+      color: #fff;
+      padding: 20px;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .gallery-item:hover .gallery-caption {
+      opacity: 1;
     }
     footer {
       background: #004080;
       color: #fff;
       text-align: center;
       padding: 20px;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -54,7 +89,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" style="height: 60px; width: auto; margin-right: 10px;">
+      <img src="images/Naybor-to-Naybor.png" alt="Naybor-to-Naybor Logo" style="height: 50px; width: auto; margin-right: 10px;">
       <span class="text-white fw-bold">Naybor-to-Naybor</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -72,91 +107,73 @@
   </div>
 </nav>
 
-<section data-aos="fade-up">
-  <div class="container">
-    <h1 class="text-center mb-5">Our Work</h1>
+<section>
+  <h1 class="gallery-title" data-aos="fade-up">Our Work</h1>
 
-    <!-- Deck Rebuild -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Deck Rebuild</h3>
-      <p>We replaced worn-out deck boards and restored structural support, giving this outdoor space a fresh, safe new look.</p>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/BeforeDeck.webp" alt="Deck before repair">
-          <p class="text-center"><strong>Before</strong></p>
-        </div>
-        <div class="col-md-6">
-          <img src="images/AfterDeck.webp" alt="Deck after repair">
-          <p class="text-center"><strong>After</strong></p>
-        </div>
-      </div>
+  <div class="gallery-grid" data-aos="fade-up">
+    <div class="gallery-item">
+      <img src="images/BeforeDeck.webp" alt="Before Deck">
+      <div class="gallery-caption">Deck rebuild - before work started</div>
     </div>
-
-    <!-- Bathroom Renovation -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Bathroom Renovation</h3>
-      <p>This bathroom had significant tile and wall damage. We removed the damaged materials, replaced fixtures, and installed fresh tile for a completely new look.</p>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/BeforeTub.webp" alt="Bathroom before renovation">
-          <p class="text-center"><strong>Before</strong></p>
-        </div>
-        <div class="col-md-6">
-          <img src="images/AfterTub.webp" alt="Bathroom after renovation">
-          <p class="text-center"><strong>After</strong></p>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="images/AfterDeck.webp" alt="After Deck">
+      <div class="gallery-caption">Deck rebuild - after restoration</div>
     </div>
-
-    <!-- Organization & Declutter -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Organization & Decluttering</h3>
-      <p>This storage area was overflowing with clutter. We provided junk removal, sorting, and organization to transform the space into a clean, usable area.</p>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/BeforeOrganization.webp" alt="Cluttered storage before">
-          <p class="text-center"><strong>Before</strong></p>
-        </div>
-        <div class="col-md-6">
-          <img src="images/AfterOrganization.webp" alt="Organized storage after">
-          <p class="text-center"><strong>After</strong></p>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="images/BeforeTub.webp" alt="Before Tub">
+      <div class="gallery-caption">Bathroom renovation - before</div>
     </div>
-
-    <!-- Pressure Washing -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Pressure Washing</h3>
-      <p>We used professional pressure washing equipment to restore the appearance of walkways, patios, and exterior surfaces, removing years of dirt and grime.</p>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/PressureWashing.webp" alt="Pressure washing process">
-          <p class="text-center"><strong>Before</strong></p>
-        </div>
-        <div class="col-md-6">
-          <img src="images/PressureWashing2.webp" alt="Cleaned surface after pressure washing">
-          <p class="text-center"><strong>After</strong></p>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="images/AfterTub.webp" alt="After Tub">
+      <div class="gallery-caption">Bathroom renovation - after completion</div>
     </div>
-
-    <!-- Gutter Cleaning -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Gutter Cleaning</h3>
-      <p>Our team provided thorough gutter cleaning to prevent water damage and keep this property safe and looking its best.</p>
-      <div class="row">
-        <div class="col-md-12">
-          <img src="images/GutterCleaning.webp" alt="Gutter cleaning in progress">
-          <p class="text-center"><strong>During Service</strong></p>
-        </div>
-      </div>
+    <div class="gallery-item">
+      <img src="images/BeforeOrganization.webp" alt="Before Organization">
+      <div class="gallery-caption">Decluttering & organization - before</div>
     </div>
+    <div class="gallery-item">
+      <img src="images/AfterOrganization.webp" alt="After Organization">
+      <div class="gallery-caption">Decluttering & organization - after</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/PressureWashing.webp" alt="Pressure Washing Before">
+      <div class="gallery-caption">Pressure washing - before cleaning</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/PressureWashing2.webp" alt="Pressure Washing After">
+      <div class="gallery-caption">Pressure washing - sparkling clean!</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/GutterCleaning.webp" alt="Gutter Cleaning">
+      <div class="gallery-caption">Gutter cleaning in progress</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Moving.webp" alt="Moving">
+      <div class="gallery-caption">Moving & hauling service</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Plumbing.webp" alt="Plumbing">
+      <div class="gallery-caption">Plumbing installation project</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/BeforeStain.webp" alt="Before Stain">
+      <div class="gallery-caption">Deck staining - before application</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/AfterStain.webp" alt="After Stain">
+      <div class="gallery-caption">Deck staining - rich new finish</div>
+    </div>
+  </div>
+</section>
 
-    <!-- Moving & Hauling -->
-    <div class="gallery-card" data-aos="fade-up">
-      <h3>Moving & Hauling</h3>
-      <p>We assisted with packing, loading, and safely transporting belongings during a home move.</p>
-      <div class="row">
-        <div class="col-md-12">
-          <img src="images/Moving.webp" alt="Moving boxes and truck">
-          <p class="text-center
+<footer>
+  &copy; 2025 Naybor-to-Naybor. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
