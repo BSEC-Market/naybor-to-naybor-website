@@ -27,12 +27,18 @@
     section {
       padding: 80px 20px;
     }
-    .gallery-image {
+    .gallery-card {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .gallery-card img {
       width: 100%;
       height: auto;
       border-radius: 8px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
     }
     footer {
       background: #004080;
@@ -68,35 +74,123 @@
 <section data-aos="fade-up">
   <div class="container">
     <h1 class="text-center mb-5">Our Work</h1>
-    <p class="lead text-center mb-5">
-      Check out some of our completed projects! We’re proud of the quality work we deliver for our customers across Richmond and surrounding areas.
-    </p>
-    <div class="row">
-      <div class="col-md-4">
-        <img src="images/job1.jpg" alt="Junk removal project" class="gallery-image">
-        <p class="text-center">Junk Removal & Cleanouts</p>
-      </div>
-      <div class="col-md-4">
-        <img src="images/job2.jpg" alt="Pressure washing result" class="gallery-image">
-        <p class="text-center">Pressure Washing</p>
-      </div>
-      <div class="col-md-4">
-        <img src="images/job3.jpg" alt="Heavy lifting service" class="gallery-image">
-        <p class="text-center">Heavy Lifting & Moving</p>
-      </div>
-      <div class="col-md-4">
-        <img src="images/job4.jpg" alt="Yard cleanout" class="gallery-image">
-        <p class="text-center">Yard Waste Removal</p>
-      </div>
-      <div class="col-md-4">
-        <img src="images/job5.jpg" alt="Construction debris removal" class="gallery-image">
-        <p class="text-center">Construction Debris Removal</p>
-      </div>
-      <div class="col-md-4">
-        <img src="images/job6.jpg" alt="Gutter cleaning" class="gallery-image">
-        <p class="text-center">Gutter Cleaning</p>
+
+    <!-- Deck Rebuild -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Deck Rebuild</h3>
+      <p>We replaced worn-out deck boards and restored structural support, giving this outdoor space a fresh, safe new look.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/BeforeDeck.webp" alt="Deck before repair">
+          <p class="text-center"><strong>Before</strong></p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/AfterDeck.webp" alt="Deck after repair">
+          <p class="text-center"><strong>After</strong></p>
+        </div>
       </div>
     </div>
+
+    <!-- Bathroom Renovation -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Bathroom Renovation</h3>
+      <p>This bathroom had significant tile and wall damage. We removed the damaged materials, replaced fixtures, and installed fresh tile for a completely new look.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/BeforeTub.webp" alt="Bathroom before renovation">
+          <p class="text-center"><strong>Before</strong></p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/AfterTub.webp" alt="Bathroom after renovation">
+          <p class="text-center"><strong>After</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organization & Declutter -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Organization & Decluttering</h3>
+      <p>This storage area was overflowing with clutter. We provided junk removal, sorting, and organization to transform the space into a clean, usable area.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/BeforeOrganization.webp" alt="Cluttered storage before">
+          <p class="text-center"><strong>Before</strong></p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/AfterOrganization.webp" alt="Organized storage after">
+          <p class="text-center"><strong>After</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pressure Washing -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Pressure Washing</h3>
+      <p>We used professional pressure washing equipment to restore the appearance of walkways, patios, and exterior surfaces, removing years of dirt and grime.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/PressureWashing.webp" alt="Pressure washing process">
+          <p class="text-center"><strong>Before</strong></p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/PressureWashing2.webp" alt="Cleaned surface after pressure washing">
+          <p class="text-center"><strong>After</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gutter Cleaning -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Gutter Cleaning</h3>
+      <p>Our team provided thorough gutter cleaning to prevent water damage and keep this property safe and looking its best.</p>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="images/GutterCleaning.webp" alt="Gutter cleaning in progress">
+          <p class="text-center"><strong>During Service</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Moving & Hauling -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Moving & Hauling</h3>
+      <p>We assisted with packing, loading, and safely transporting belongings during a home move.</p>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="images/Moving.webp" alt="Moving boxes and truck">
+          <p class="text-center"><strong>During Service</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plumbing Work -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Plumbing Installation</h3>
+      <p>We completed complex plumbing installation work, replacing old pipes and ensuring proper water flow throughout this property.</p>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="images/Plumbing.webp" alt="Plumbing work under construction">
+          <p class="text-center"><strong>During Service</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deck Staining -->
+    <div class="gallery-card" data-aos="fade-up">
+      <h3>Deck Staining</h3>
+      <p>We stained and sealed this beautiful deck, protecting it from the elements and giving it a fresh, rich color.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/BeforeStain.webp" alt="Deck before staining">
+          <p class="text-center"><strong>Before</strong></p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/AfterStain.webp" alt="Deck after staining">
+          <p class="text-center"><strong>After</strong></p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
